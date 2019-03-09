@@ -22,5 +22,5 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input NewTodo) (*Todo
 type queryResolver struct{ *Resolver }
 
 func (r *queryResolver) Todos(ctx context.Context) ([]Todo, error) {
-	panic("not implemented")
+	return []Todo{Todo{ID: "1"}, Todo{ID: "2"}, Todo{ID: "3"}}, nil
 }

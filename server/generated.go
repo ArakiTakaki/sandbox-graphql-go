@@ -222,7 +222,11 @@ func (ec *executionContext) introspectType(name string) (*introspection.Type, er
 }
 
 var parsedSchema = gqlparser.MustLoadSchema(
-	&ast.Source{Name: "schema.graphql", Input: `type Todo {
+	&ast.Source{Name: "schema.graphql", Input: `# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Todo {
   id: ID!
   text: String!
   done: Boolean!
@@ -245,8 +249,7 @@ input NewTodo {
 
 type Mutation {
   createTodo(input: NewTodo!): Todo!
-}
-`},
+}`},
 )
 
 // endregion ************************** generated!.gotpl **************************
