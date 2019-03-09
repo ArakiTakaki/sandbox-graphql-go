@@ -230,6 +230,10 @@ var parsedSchema = gqlparser.MustLoadSchema(
 #
 # https://gqlgen.com/getting-started/
 
+# ここに基本的にスキーマを設定していく
+
+# queries
+
 type Todo {
   id: ID!
   text: String!
@@ -245,6 +249,8 @@ type User {
 type Query {
   todos: [Todo!]!
 }
+
+# mutations
 
 input NewTodo {
   text: String!
